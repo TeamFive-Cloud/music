@@ -1,0 +1,284 @@
+/* Resources.module.css */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #9f7aea, #ed64a6, #f56565);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.section {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.newsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.learningResourcesList {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* 自定义滚动条样式 */
+.newsList::-webkit-scrollbar,
+.reviewsList::-webkit-scrollbar,
+.learningResourcesList::-webkit-scrollbar {
+  width: 12px;
+}
+
+.newsList::-webkit-scrollbar-track,
+.reviewsList::-webkit-scrollbar-track,
+.learningResourcesList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.newsList::-webkit-scrollbar-thumb,
+.reviewsList::-webkit-scrollbar-thumb,
+.learningResourcesList::-webkit-scrollbar-thumb {
+  background: #ed64a6;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.newsList::-webkit-scrollbar-thumb:hover,
+.reviewsList::-webkit-scrollbar-thumb:hover,
+.learningResourcesList::-webkit-scrollbar-thumb:hover {
+  background: #f56565;
+}
+
+.cardLink {
+  text-decoration: none;
+}
+
+.card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: #fff;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(10px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardSource {
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+.reviewCard {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.reviewCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(10px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.reviewCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reviewCardImage {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.reviewCardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.reviewCardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.reviewCardDescription {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.reviewCardReviewer,
+.reviewCardSource,
+.reviewCardDate {
+  font-size: 0.875rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.reviewCardLink {
+  align-self: flex-start;
+  margin-top: auto;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.audioPlayer {
+  width: 15rem;
+  margin: 1rem 0;
+}
+
+.resourceCard {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1rem 0 1rem 0.2rem;
+}
+
+.resourceCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(10px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.resourceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resourceTitle {
+  width: 25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.resourceArtist {
+  width: 7rem;
+  font-size: 1rem;
+  color: #ccc;
+  margin-right: 1rem;
+}
+
+.resourceImage {
+  width: 450px;
+  height: 100px;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: #fff;
+  background: white;
+  text-align: center;
+}
+
+.placeholderText {
+  font-size: 1rem;
+  color: black;
+  margin-top: 0.5rem;
+}
+
+.loadMoreButton {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #ed64a6;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loadMoreButton:hover {
+  background-color: #f56565;
+}

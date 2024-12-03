@@ -1,0 +1,140 @@
+.header {
+    background: linear-gradient(90deg, rgba(159, 122, 234, 0.7), rgba(237, 100, 166, 0.7));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+  }
+  
+  .navLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .brand:hover {
+    transform: scale(1.05);
+  }
+  
+  .brandIcon {
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    margin-right: 0.5rem;
+  }
+  
+  .brandTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navLinks {
+    display: none;
+    margin-left: 4rem;
+    gap: 3.5rem;
+  }
+  
+  .navLink {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .navLink:hover,
+  .navLink.active {
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .navRight {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profileLink {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .profileLink:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .profileText {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .profileLink::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+  
+  .profileLink:hover::before {
+    width: 300%;
+    height: 300%;
+  }
+  
+  @media (min-width: 640px) {
+    .navLinks {
+      display: flex;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  .brand {
+    animation: pulse 2s infinite;
+  }
+  
+  
